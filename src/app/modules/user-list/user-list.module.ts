@@ -1,3 +1,4 @@
+import { FirebaseModule } from './../firebase/firebase.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 

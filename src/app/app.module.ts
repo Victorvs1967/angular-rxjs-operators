@@ -1,3 +1,4 @@
+import { FirebaseModule } from './modules/firebase/firebase.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -16,6 +17,7 @@ import { MaterialUiModule } from './modules/material-ui/material-ui.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialUiModule,
+    FirebaseModule,
   ],
   providers: [
     {

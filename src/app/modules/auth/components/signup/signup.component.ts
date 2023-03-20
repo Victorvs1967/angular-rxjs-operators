@@ -1,9 +1,9 @@
+import { UserService } from 'src/app/services/user.service';
 import { Component, Inject } from '@angular/core';
 import { UntypedFormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { authDialog } from '../auth.decorator';
 import { User } from 'src/app/models/user.model';
-import { LoginComponent } from '../login/login.component';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-signup',
@@ -17,6 +17,7 @@ export class SignupComponent {
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: User,
     private formBuilder: FormBuilder,
+    private userService: UserService,
   ) {
     this.signupForm = this.formBuilder.group({
       username: ['', [Validators.required]],
@@ -28,7 +29,14 @@ export class SignupComponent {
   }
 
   onSubmit() {
-    console.log(this.signupForm.value);
+    const user: User = {
+      ...this.signupForm.value,
+      onCreate: (new Date()).toUTCString(),
+      onUpdate: (new Date()).toUTCString(),
+    };
+
+    this.userService.addUser(user)
+       .subscribe();
   }
 
 }

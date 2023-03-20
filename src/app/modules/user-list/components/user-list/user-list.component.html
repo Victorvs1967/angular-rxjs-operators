@@ -1,1 +1,12 @@
-<p>user-list works!</p>
+<mat-list dense>
+  <div mat-subheader>Users</div>
+  <mat-list-item *ngFor="let user of users">
+    <mat-icon matListItemIcon class="mat-18">person</mat-icon>
+    <span matListItemTitle>
+      {{ user.id }} --> {{ user.username }} --> {{ user.firstName?.concat(' ', user.lastName ?? '') }}
+    </span>
+    <span matListItemLine align="end">
+      {{ user.onCreate | date: 'dd.MM.yyyy - HH:mm:ss' }}
+    </span>
+  </mat-list-item>
+</mat-list>
