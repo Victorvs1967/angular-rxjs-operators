@@ -1,0 +1,36 @@
+<h2 mat-dialog-title>Sign Up</h2>
+<button class="btn-close" mat-icon-button [mat-dialog-close]="false"><mat-icon class="mat-12">close</mat-icon></button>
+<mat-divider></mat-divider>
+<form mat-dialog-content [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="outline">
+    <mat-label>Username</mat-label>
+    <input matInput type="text" placeholder="Enter username..." formControlName="username">
+    <mat-hint>username</mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" placeholder="Enter password..." formControlName="password">
+    <mat-hint>password</mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" placeholder="Enter email..." formControlName="email">
+    <mat-hint>email</mat-hint>
+  </mat-form-field>
+  <div class="field-group">
+    <mat-form-field appearance="outline">
+      <mat-label>First name</mat-label>
+      <input matInput type="text" placeholder="Enter username..." formControlName="firstName">
+      <mat-hint>first name</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Last name</mat-label>
+      <input matInput type="text" placeholder="Enter password..." formControlName="lastName">
+      <mat-hint>last name</mat-hint>
+    </mat-form-field>
+  </div>
+  <mat-dialog-actions [align]="'end'">
+    <button mat-stroked-button [mat-dialog-close]="false">Cancel</button>
+    <button mat-stroked-button [mat-dialog-close]="true" color="primary" type="submit">Sign Up</button>
+  </mat-dialog-actions>
+</form>

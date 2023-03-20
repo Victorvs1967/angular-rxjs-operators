@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>Login</h2>
+<button class="btn-close" mat-icon-button [mat-dialog-close]="false"><mat-icon class="mat-12">close</mat-icon></button>
+<mat-divider></mat-divider>
+<form mat-dialog-content [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="outline">
+    <mat-label>Username</mat-label>
+    <input matInput type="text" placeholder="Enter username..." formControlName="username">
+    <mat-hint>username</mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input matInput type="text" placeholder="Enter password..." formControlName="password">
+    <mat-hint>password</mat-hint>
+  </mat-form-field>
+  <mat-dialog-actions [align]="'end'">
+    <button mat-stroked-button [mat-dialog-close]="false" (click)="signup()">Sign Up</button>
+    <button mat-stroked-button [mat-dialog-close]="true" color="primary" type="submit">Login</button>
+  </mat-dialog-actions>
+</form>

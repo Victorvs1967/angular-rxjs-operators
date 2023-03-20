@@ -1,0 +1,15 @@
+<mat-toolbar class="header" color="primary">
+  <span>RxJs App</span>
+  <div class="spacer"></div>
+  <nav class="header-menu">
+    <a mat-button class="header-menu-item" routerLink="users">Users</a>
+    <a mat-button class="header-menu-item">About</a>
+    <a mat-button class="header-menu-item">Contacts</a>
+  </nav>
+  <div class="spacer"></div>
+  <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></button>
+</mat-toolbar>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="login()">Login<mat-icon class-="mat-16" >login</mat-icon></button>
+  <button mat-menu-item>Logout<mat-icon class="mat-16">logout</mat-icon></button>
+</mat-menu>
