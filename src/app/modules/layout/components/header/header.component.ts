@@ -1,6 +1,6 @@
-import { modal } from './../../../../services/modal.decorator';
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { LoginComponent } from 'src/app/modules/auth/components/login/login.component';
+import { modal } from 'src/app/services/modal.decorator';
 
 @Component({
   selector: 'app-header',
