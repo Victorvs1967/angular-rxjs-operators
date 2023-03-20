@@ -1,8 +1,8 @@
+import { modal } from './../../../../services/modal.decorator';
 import { Component, Inject } from '@angular/core';
 import { FormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { LoginData } from 'src/app/models/login-data.model';
-import { authDialog } from '../auth.decorator';
 import { SignupComponent } from '../signup/signup.component';
 
 @Component({
@@ -28,7 +28,7 @@ export class LoginComponent {
     console.log(this.loginForm.value);
   }
 
-  @authDialog(SignupComponent)
+  @modal(SignupComponent)
   signup() {
   }
 
