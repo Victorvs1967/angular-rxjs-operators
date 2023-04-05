@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { SocialAuthService } from '@abacritt/angularx-social-login';
+import { Component, inject } from '@angular/core';
 import { LoginComponent } from 'src/app/modules/auth/components/login/login.component';
 import { modal } from 'src/app/services/modal.decorator';
 
@@ -9,7 +10,14 @@ import { modal } from 'src/app/services/modal.decorator';
 })
 export class HeaderComponent {
 
+  private auth = inject(SocialAuthService);
+
   @modal(LoginComponent)
   login() {
   }
+
+  signOut(): void {
+    this.auth.signOut();
+  }
+
 }

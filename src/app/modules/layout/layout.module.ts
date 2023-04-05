@@ -7,13 +7,15 @@ import { MaterialUiModule } from '../material-ui/material-ui.module';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AuthModule } from '../auth/auth.module';
+import { OperatorsComponent } from './components/operators/operators.component';
 
 
 @NgModule({
   declarations: [
     LayoutComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    OperatorsComponent
   ],
   imports: [
     CommonModule,
