@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialUiModule } from '../material-ui/material-ui.module';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { GoogleSigninButtonModule } from '@abacritt/angularx-social-login';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { SignupComponent } from './components/signup/signup.component';
     CommonModule,
     MaterialUiModule,
     ReactiveFormsModule,
+    GoogleSigninButtonModule,
   ],
 })
 export class AuthModule { }
